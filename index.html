@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muzza</title>
+    <link rel="icon" href="img/icon.png" type="image/png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/screenshot.css">
+    <link rel="stylesheet" href="css/language-selector.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/highlight.css">
+    <link rel="stylesheet" href="css/download-button.css">
+    <script src="js/language-selector.js"></script>
+    <script src="js/screenshot.js"></script>
+</head>
+<body>
+    <header>
+        <img src="img/icon.png" alt="App Icon" width="100">
+        <h1 id="app-title">Muzza</h1>
+        <p id="app-description">Ваш идеальный музыкальный плеер для Android!</p>
+    </header>
+    <div class="language-selector">
+        <label for="language" id="language-label">Выберите язык:</label>
+        <select id="language" onchange="changeLanguage()">
+            <option value="en">English</option>
+            <option value="ru" selected>Русский</option>
+        </select>
+    </div>
+    <div class="container">
+        <h2 id="description-header">Описание</h2>
+        <p id="description">Музыкальный клиент на основе API YouTube Music. Он раскроет вашу любовь к музыке на полную катушку без рекламы и подписок!</p>
+        <h2 id="features-header">Основные функции</h2>
+        <ul class="features">
+            <li id="feature1" onclick="highlightFeature(this)">Возможность воспроизведения как онлайн, так и локальных композиций</li>
+            <li id="feature2" onclick="highlightFeature(this)">Полная синхронизация с YouTube Music</li>
+            <li id="feature3" onclick="highlightFeature(this)">Современный и привлекательный дизайн</li>
+            <li id="feature4" onclick="highlightFeature(this)">Разнообразные режимы воспроизведения: случайный, повтор и последовательный</li>
+        </ul>
+        <h2 id="screenshots-header">Скриншоты</h2>
+        <div class="screenshot">
+            <img src="img/screenshot1.jpg" alt="Screenshot 1" onclick="openModal(0)">
+            <img src="img/screenshot2.jpg" alt="Screenshot 2" onclick="openModal(1)">
+            <img src="img/screenshot3.jpg" alt="Screenshot 3" onclick="openModal(2)">
+        </div>
+        <p><strong><a href="https://github.com/Maloy-Android/Muzza/releases/download/v0.6.2/Muzza-0.6.2-foss-release.apk" class="download-btn" id="download-btn" download>Скачать</a></strong></p>
+        <h2 id="developer-header">Разработчик</h2>
+        <div class="developer">
+            <img src="https://avatars.githubusercontent.com/u/177887593?s=96&v=4" alt="Developer Avatar" width="50">
+            <div>
+                <p><strong><a href="https://github.com/Maloy-Android" style="color: #4CAF50; text-decoration: none;">Maloy-Android</a></strong></p>
+            </div>
+        </div>
+    </div>
+    <div id="modal" class="modal" onclick="closeModal(event)">
+        <button class="close-btn" onclick="closeModal(event)">✖</button>
+        <img id="modal-img" src="" alt="Enlarged Screenshot">
+    </div>
+    <footer>
+        <p id="footer-text">&copy; 2024 Muzza. Все права защищены.</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+</body>
+</html>
