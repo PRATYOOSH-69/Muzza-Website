@@ -1,7 +1,9 @@
 const screenshots = [
     'img/screenshot1.jpg',
     'img/screenshot2.jpg',
-    'img/screenshot3.jpg'
+    'img/screenshot3.jpg',
+    'img/screenshot4.jpg',
+    'img/screenshot5.jpg'
 ];
 let currentIndex = 0;
 let hammer;
