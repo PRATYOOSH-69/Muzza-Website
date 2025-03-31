@@ -1,9 +1,0 @@
-
-.features li {
-    transition: background-color 0.3s ease, border 0.3s ease;
-}
-
-.highlighted {
-    background-color: #f0f0f0;
-    border: 1px solid #000000;
-}
